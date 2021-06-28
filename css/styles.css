@@ -441,7 +441,30 @@ body {
   margin-top: 0;
   margin-bottom: 9px;
 }
-
+.footer-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.17;
+  color: var(--main-background-hero-adress-color);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.footer-container {
+  display: flex;
+}
+.social-media {
+  margin-left: 70px;
+}
+.social-list {
+}
+/* без останньої дитини 
+і подивитись чого кружечок не по центру*/
+.footer-button {
+  margin-right: 10px;
+  fill: var(--main-background-hero-adress-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
 /* Кнопки */
 
 .button {
