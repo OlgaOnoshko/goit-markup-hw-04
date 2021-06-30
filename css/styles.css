@@ -10,15 +10,6 @@
   --team-clients-icon-color: #afb1b8;
 }
 
-/* основний текст #757575 */
-/* заголовки додатковий текст #212121*/
-/* лого #000000 */
-/* акцент голубий #2196F3 */
-/* Основий білий фон #FFFFFF */
-/* фон Наша Команда #F5F4FA */
-/* фон Герой і футер #2F303A */
-/* напівпорзорий білий rgba(255, 255, 255, 0,6); */
-
 /* написання css - спочатку все по блочній моделі(падінги, мардж.),
 потім стрилі, шрифти, нижче ефекти, анімація, переходи
 відділяти це пробілом для кращої читабельності  */
@@ -35,6 +26,7 @@
 }
 
 /* списки */
+
 .site-nav,
 .header-contacts,
 .features,
@@ -49,7 +41,6 @@
   padding: 0;
   margin: 0;
 }
-
 body {
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -137,7 +128,8 @@ body {
   margin-left: 50px;
 }
 .header-contacts .link {
-  display: block;
+  display: flex;
+  align-items: center;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -147,7 +139,6 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-
 .header-contacts .link:hover,
 .header-contacts .link:focus {
   color: var(--blue-accent);
@@ -159,6 +150,7 @@ body {
 }
 
 /* Герой */
+
 .hero {
   background-color: var(--hero-footer-background-color);
   background-image: linear-gradient(
@@ -312,14 +304,13 @@ body {
   fill: var(--main-background-hero-adress-color);
   background-color: var(--blue-accent);
 }
-.social-image {
-}
+
 /* Наші Клієнти */
+
 .clients-section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-
 .clients-list {
   display: flex;
   justify-content: space-between;
@@ -361,7 +352,7 @@ body {
   margin-top: 0;
   margin-bottom: 4px;
 }
-.item .link {
+.gallery-item .link {
   display: block;
 }
 .gallery-work {
@@ -402,15 +393,15 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-.gallery > .item {
+.gallery > .gallery-item {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 }
-.gallery > .item:nth-child(3n) {
+.gallery > .gallery-item:nth-child(3n) {
   margin-right: 0;
 }
-.gallery > .item:nth-last-child(-n + 3) {
+.gallery > .gallery-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 .img {
@@ -420,7 +411,7 @@ body {
 .card-content {
   padding: 20px 24px;
 }
-.gallery .item:hover {
+.gallery .gallery-item:hover {
   box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
     0px 1px 1px 0px #0000001f;
 }
@@ -479,16 +470,19 @@ body {
 .social-media {
   margin-left: 70px;
 }
-.social-list {
-}
-/* без останньої дитини 
-як вирівняти заголовок ПРИЄДНУЙТЕСЬ
-і подивитись чого кружечок не по центру*/
-.footer-button {
+.footer-item .social-link {
   fill: var(--main-background-hero-adress-color);
   background-color: rgba(255, 255, 255, 0.1);
 }
+.footer-item .social-link:hover,
+.footer-item .social-link:focus {
+  fill: var(--main-background-hero-adress-color);
+  background-color: var(--blue-accent);
+}
 .social-list .item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-list .footer-item:not(:last-child) {
   margin-right: 10px;
 }
 /* Кнопки */
