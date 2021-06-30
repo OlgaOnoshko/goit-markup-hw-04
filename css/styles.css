@@ -29,7 +29,6 @@
   padding-left: 15px;
   padding-right: 15px;
   width: 1200px;
-  /* outline: solid 2px tomato; */
 }
 .portfolio-container {
   padding-bottom: 94px;
@@ -126,7 +125,13 @@ body {
 
 .header-contacts {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
+}
+.contacts-icon {
+  fill: var(--primary-text-color);
+  margin-right: 10px;
 }
 .header-contacts .item + .item {
   margin-left: 50px;
@@ -142,13 +147,18 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
 }
+
 .header-contacts .link:hover,
 .header-contacts .link:focus {
   color: var(--blue-accent);
+  cursor: pointer;
+}
+.header-contacts .link:hover svg,
+.header-contacts .link:focus svg {
+  fill: var(--blue-accent);
 }
 
 /* Герой */
-/* прояснити за максвидс */
 .hero {
   background-color: var(--hero-footer-background-color);
   background-image: linear-gradient(
@@ -225,6 +235,15 @@ body {
   margin-bottom: 0;
   padding-top: 94px;
 }
+.feature-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--team-section-background-color);
+}
 
 /* Наші Роботи */
 .whatwedo {
@@ -278,20 +297,20 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
-.social-button {
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   border: none;
-  background: none;
   padding: 0;
   fill: var(--team-clients-icon-color);
 }
-/* Притикнути сюди ще аріа баттон*/
-.social-button:hover {
+.social-link:hover {
   fill: var(--main-background-hero-adress-color);
   background-color: var(--blue-accent);
-  border-radius: 50%;
 }
 .social-image {
 }
@@ -401,6 +420,10 @@ body {
 .card-content {
   padding: 20px 24px;
 }
+.gallery .item:hover {
+  box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
+    0px 1px 1px 0px #0000001f;
+}
 
 /* Футер */
 
@@ -447,7 +470,7 @@ body {
   line-height: 1.17;
   color: var(--main-background-hero-adress-color);
   text-transform: uppercase;
-  margin-top: 0;
+  margin-top: 12px;
   margin-bottom: 20px;
 }
 .footer-container {
@@ -459,11 +482,14 @@ body {
 .social-list {
 }
 /* без останньої дитини 
+як вирівняти заголовок ПРИЄДНУЙТЕСЬ
 і подивитись чого кружечок не по центру*/
 .footer-button {
-  margin-right: 10px;
   fill: var(--main-background-hero-adress-color);
   background-color: rgba(255, 255, 255, 0.1);
+}
+.social-list .item:not(:last-child) {
+  margin-right: 10px;
 }
 /* Кнопки */
 
@@ -485,7 +511,14 @@ body {
   color: var(--team-section-background-color);
   background-color: var(--secondary-header-color);
 }
-
+.nav-button .button:hover {
+  box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014,
+    0px 3px 1px 0px #0000001a;
+}
+.nav-button .button:focus {
+  box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014,
+    0px 3px 1px 0px #0000001a;
+}
 /* Кнопка Героя */
 .hero-button {
   height: 50px;
