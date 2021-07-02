@@ -318,18 +318,19 @@ body {
   margin: 0;
 }
 .client-button {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
+  padding: 0;
   background-color: inherit;
   fill: var(--team-clients-icon-color);
   border: solid 1px var(--team-clients-icon-color);
 }
-
 .client-image {
   display: inline-block;
 }
-
 .client-button:hover {
   fill: var(--blue-accent);
   border: solid 1px var(--blue-accent);
