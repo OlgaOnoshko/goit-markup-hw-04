@@ -9,7 +9,7 @@
   --footer-contact-white: rgba(255, 255, 255, 0.6);
   --team-clients-icon-color: #afb1b8;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-time: 250ms;
+  --transition-time: 2250ms;
 }
 
 /* написання css - спочатку позиція, геометрія, все по блочній моделі(падінги, мардж.),
@@ -643,13 +643,13 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: opacity var(--transition-time) var(--timing-function);
+  transition: opacity var(--transition-time) var(--timing-function),
+    scale var(--transition-time) var(--timing-function);
 }
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   pointer-events: none;
-
-  transition: opacity var(--transition-time) var(--timing-function);
+  transform: scale(0.75);
 }
 .modal {
   position: absolute;
