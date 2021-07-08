@@ -142,7 +142,7 @@ body {
   fill: var(--primary-text-color);
   margin-right: 10px;
 
-  transition: color var(--transition-time) var(--timing-function);
+  transition: fill var(--transition-time) var(--timing-function);
 }
 .header-contacts .item + .item {
   margin-left: 50px;
